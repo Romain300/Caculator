@@ -55,7 +55,8 @@ body {
 
 .numberButton,
 .operatorButton,
-.cancel {
+.cancel,
+.operateButton {
     padding: 20px;
     flex: 1;
     text-align: center;
@@ -64,12 +65,14 @@ body {
 
 .numberButton,
 .operatorButton,
+.operateButton,
 .cancel:hover {
     cursor: pointer;
     
 }
 
-.operatorButton {
+.operatorButton,
+.operateButton {
     background-color: black;
     color: aliceblue;
 }

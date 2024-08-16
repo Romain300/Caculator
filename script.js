@@ -1,19 +1,38 @@
 function add(a, b) {
-    return a + b;
+    if (isNaN(a) || isNaN(b)) {
+        return "ERROR";
+    } else {
+        return a + b;
+    };  
 };
 
 function subtract(a, b) {
-    return a - b;
+    if (isNaN(a) || isNaN(b)) {
+        return "ERROR";
+    } else {
+        return a - b;
+    }  ;
 };
 
 function multiply(a, b) {
-    return a * b;
+    if (isNaN(a) || isNaN(b)) {
+        return "ERROR";
+    } else {
+        return a * b;
+    }
+    
 };
 
 console.log(multiply(5, 6));
 
 function divide(a,b) {
-    return Math.round((a / b) * 10) / 10;
+    if (isNaN(a) || isNaN(b)) {
+        return "ERROR";
+    } else if (b === 0) {
+        return "lol";
+    } else {
+        return Math.round((a / b) * 100000) / 100000;
+    }
 };
 
 
@@ -48,9 +67,12 @@ function populateScreen() {
 
     numbersButton.forEach((button) => {
         button.addEventListener("click", () => {
-            const number = button.textContent;
-            currentDisplayValue += number;
-            screen.textContent = currentDisplayValue;
+            if (currentDisplayValue.length < 15) {
+                const number = button.textContent;
+                currentDisplayValue += number;
+                screen.textContent = currentDisplayValue;
+            };
+            
         });
     });
 
@@ -86,6 +108,7 @@ function populateScreen() {
                 result = operate(number1, operator, number2);
                 screen.textContent = result;
                 number1 = result;
+                console.log(result.toString().length);
                 currentDisplayValue = "";
             }; 
 

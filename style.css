@@ -19,7 +19,9 @@ body {
     flex-direction: column;
     background-color: rgb(126, 122, 122);
     padding: 50px 25px;
-    flex: 1;
+    width: 330px;
+    flex-shrink: 0;
+    flex-grow: 0;
     border-radius: 10px;
 }
 
@@ -34,6 +36,8 @@ body {
     border-radius: 10px;
     font-weight: 700;
     font-size: 32px;
+    overflow-wrap: anywhere;
+    
 }
 
 .buttons {
